@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "CarBuddy Direct"
+version = "1.0.0"
+id = "artifacts/carbuddy"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 23368
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/carbuddy run dev"
+
+[services.env]
+PORT = "23368"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/carbuddy", "run", "build"]
+publicDir = "artifacts/carbuddy/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

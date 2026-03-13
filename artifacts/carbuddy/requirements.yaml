@@ -1,0 +1,18 @@
+packages:
+  "framer-motion": "Smooth layout transitions and animations for chat bubbles and panels"
+  "react-markdown": "Safely render markdown formatting from the AI responses"
+  "remark-gfm": "Support GitHub flavored markdown in AI responses"
+  "date-fns": "Format timestamps for conversation history"
+
+images:
+  - path: "artifacts/carbuddy/public/images/ai-avatar.png"
+    description: "A premium, abstract AI avatar. A glowing, fluid orb or spark in deep indigo and vibrant cyan on a dark background. Very minimal, sleek, and modern."
+    aspect_ratio: "1:1"
+  - path: "artifacts/carbuddy/public/images/welcome-bg.png"
+    description: "A subtle, dark gradient mesh background. Deep navy blue, dark slate, with soft, out-of-focus highlights of cyan and purple. Premium, clean, minimal glassmorphism style."
+    aspect_ratio: "16:9"
+
+notes:
+  - Streaming uses standard fetch and ReadableStream parsing chunks of form `data: {"content": "..."}`.
+  - The generated API hooks are imported from `@workspace/api-client-react`.
+  - Conversations, messages, vehicles, and shortlist are all fully implemented.
